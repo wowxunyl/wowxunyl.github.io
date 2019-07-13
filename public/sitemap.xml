@@ -3,17 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://wowxunyl.github.io/posts/2019-07/my-first-post/</loc>
+    <lastmod>2019-07-13T20:34:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wowxunyl.github.io/posts/</loc>
+    <lastmod>2019-07-13T20:34:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://wowxunyl.github.io/</loc>
+    <lastmod>2019-07-13T20:34:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://wowxunyl.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://wowxunyl.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://wowxunyl.github.io/</loc>
     <priority>0</priority>
   </url>
   
