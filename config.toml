@@ -5,3 +5,6 @@ theme = "yinyang"
 
 [Author]
   name = "xunyulin"
+
+[Params]
+  disqus = "xunyulin"
