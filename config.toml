@@ -1,0 +1,4 @@
+baseURL = "http://wowxunyl.github.io"
+languageCode = "en-us"
+title = "xunyulin's blog"
+theme = "yinyang"
