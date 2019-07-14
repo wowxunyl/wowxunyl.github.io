@@ -6,10 +6,25 @@
     <description>Recent content in Posts on xunyulin&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jul 2019 20:34:26 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 17:10:46 +0800</lastBuildDate>
     
 	<atom:link href="http://wowxunyl.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kafka consumer无法正常启动原因调查</title>
+      <link>http://wowxunyl.github.io/posts/2019-07/14-kafka-consumer-fail-start/</link>
+      <pubDate>Sun, 14 Jul 2019 17:10:46 +0800</pubDate>
+      
+      <guid>http://wowxunyl.github.io/posts/2019-07/14-kafka-consumer-fail-start/</guid>
+      <description>背景 生产环境三个服务分别消费kafka(version 1.1.0)不同topic里的日志分析结果，将其写入HBase，其中消费kafka使用的是consumer的subscribe API。服务稳定运行了几个月，某次因为HBase升级将其临时关闭，在重新启动过程中，诡异的问题发生了。
+现象 三个服务中有一个可以正常启动，另外两个在启动过程中似乎卡在某个地方block住。打开info级别的日志，发现如下可疑信息 &amp;gt; 2018-12-28 16:58:22 WARN pool-1-thread-2 org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-2, groupId=defy-rtlog-receiver-srcproxy] Connection to node -2 could not be established. Broker may not be available.
+调整日志级别为debug，重新观察观察日志，发现服务不停打印如下信息 &amp;gt; Coordinator discovery failed, refreshing metadata
+分析问题 从日志来看，服务中kafka consumer一直死循环寻找coordinator. 但coordinator是什么鬼？
+话说源码之前了无秘密，翻下源码，可以从注释中可以看到GroupCoordinator角色的描述如下
+ GroupCoordinator handles general group membership and offset management.
+Each Kafka server instantiates a coordinator which is responsible for a set of groups. Groups are assigned to coordinators based on their group names.</description>
+    </item>
     
     <item>
       <title>My First Post</title>

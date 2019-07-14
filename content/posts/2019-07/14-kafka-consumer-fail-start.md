@@ -1,7 +1,7 @@
 ---
 title: "kafka consumer无法正常启动原因调查"
 date: 2019-07-14T17:10:46+08:00
-draft: true
+draft: false
 ---
 
 # 背景
