@@ -17,5 +17,10 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin hugo
-git subtree push --prefix=public origin master
+# git subtree push --prefix=public origin master
+git subtree split --prefix=public origin master
+# git subtree split -P public -b mastert
+# git checkout master
+# git push
+# git checkout hugo
 
